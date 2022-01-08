@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<span>Number 1</span>
+<input type="text" id="num1">
+<br/>
+<br />
+<button id="add">Add</button>
+<br/>
+<br/>
+<span>Number2</span><input type="text" id="num2">
+<br/>
+<hr>
+<span>Result</span><input type="text" id="result">
+<script>
+document.getElementById("add").onclick = function() {
+  myFunction()
+};
+
+function myFunction() {
+ let number1 =  document.getElementById("num1").value ;
+ let number2 =  document.getElementById("num2").value ;
+let result = Number(number1)+Number(number2);
+ document.getElementById("result").value=result ;
+
+}
+</script>
+
+</body>
+</html>
