@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>  <head>
+    <title>
+        Test
+    </title>
+</head>  <body>
+   <p id="para">
+       Hello Javascript
+   </p>
+   <button id="b1">Change to Blue</button>
+<button onclick="changeColor('red');">Change to Red
+</button>
+     
+    <script>
+         function changeColor(color){
+          var element =  document.getElementById("para");
+            element.style.color = color;}
+
+   var btn1 =   document.getElementById("b1");
+   btn1.onclick = (event)=>{changeColor('blue')};
+    
+    
+      
+    </script> 
+     </body>
+

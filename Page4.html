@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button id="run">Run</button>
+    <div>
+        My name appears here
+    </div>
+    <p id="para">
+    </p>
+    <script>
+        document.getElementById("run").onclick = function ()
+         {
+            myFunction()
+        };
+        function myFunction() {
+            for (var i = 0; i < 10; i++) {
+                var node = document.createElement("H2");
+                var textnode = document.createTextNode("MD"); 
+                node.appendChild(textnode); 
+                document.getElementById("para").appendChild(node); 
+                console.log(i);
+            }
+
+        }
+    </script>
+</body>
+
+</html>
