@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1> AJAX Example</h1>
+    <p id="demo"> The text here gets changed </p>
+    <button onclick="loadDoc()">Click me</button>
+    <script>
+        function loadDoc() {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                }
+            };
+            xmlHttp.open("GET", "ajax.txt", true);
+            xmlHttp.send();
+        }
+    </script>
+</body>
+
+</html>
