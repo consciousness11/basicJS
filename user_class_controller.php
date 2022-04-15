@@ -1,13 +1,26 @@
 <?php
+include_once 'DAO.php';
 class UserController {
 private $model;
 private $view;
 
 public function userAction(){
-$model = new User();
+
+$models[] = new User();
 $view = new UserView();
-$view->display($model->getUsernames());
+$dao = new DAO();
+$result = $dao->getData("select * from info");
+foreach ( $result as $key =>$result) {
+   
+    $model = new User();
+    $model->setUsernames($result['username']);
+    $model->setPasswords($result['password']);
+    $model->setId($result['id']);
+    $models[] = $model; 
+    
 }
 
+$view->display($models);
+}
 }
 ?>
